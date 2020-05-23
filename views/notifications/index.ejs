@@ -1,0 +1,13 @@
+<%- include("../partials/header.ejs") %>
+<h1>Notifications</h1>
+
+<ul>
+	<% allNotifications.forEach(function(notification) { %>
+	<li>
+		<a href="/campgrounds/<%= notification.campgroundId %>">
+			<%= notification.username %> just added something new to the pool. Dive in! %>
+		</a>
+	</li>
+	<% }); %>
+</ul>
+<%- include("../partials/footer.ejs") %>
